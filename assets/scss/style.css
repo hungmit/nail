@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  height: 4500px;
+  background-color: #faf6f7;
+}
+
+.nav--hidden {
+  transform: translateY(-120px);
+  box-shadow: none;
+  transition: 0.3s ease;
+}
+
+.container {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin: 0 auto;
+  right: 0;
+}
+
+@media (max-width: 1000px) {
+  .intro_picture {
+    opacity: 0.3;
+  }
+  .prislista {
+    overflow: auto;
+  }
+}
+.backup_img .backup_image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  position: fixed;
+  transition: 0.3s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+header .container {
+  padding-top: 4vh;
+  padding-bottom: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+header .container a {
+  text-decoration: none;
+}
+header .container h2 {
+  text-transform: none;
+  font-size: clamp(30px, 3vw, 50px);
+  font-weight: 900;
+  color: black;
+}
+header .container h2:hover {
+  cursor: pointer;
+}
+header .container h2 span {
+  font-weight: 600;
+  color: blueviolet;
+}
+header .container nav {
+  display: flex;
+  align-items: center;
+}
+header .container nav .menu_items {
+  display: flex;
+  gap: 1.5vw;
+}
+header .container nav .menu_items a {
+  font-size: clamp(18px, 1.25vw, 28px);
+  color: inherit;
+  text-decoration: none;
+}
+header .container nav .menu_items a:hover {
+  color: blueviolet;
+}
+
+main {
+  max-height: 4500px;
+  background-color: #faf6f7;
+  z-index: 1;
+}
+main .intro_face {
+  align-items: center;
+  display: flex;
+  padding-left: 5vw;
+}
+main .intro_face .intro_line {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .intro_face .intro_line .first_intro_line {
+  font-size: clamp(20px, 3vw, 50px);
+}
+main .intro_face .intro_line .second_intro_line {
+  width: 80%;
+  font-size: clamp(15px, 1.5vw, 40px);
+}
+main .intro_face .intro_picture_container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F4F0F1;
+  box-sizing: border-box;
+}
+main .intro_face .intro_picture_container img {
+  position: relative;
+  right: 150px;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .intro_face .button {
+  position: relative;
+  font-size: 1.5vw;
+  text-align: center;
+  color: white;
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: solid 2px blueviolet;
+}
+main .intro_face .button:hover {
+  color: blueviolet;
+  background-color: white;
+  border: solid 2px blueviolet;
+}
+main .naglar_service {
+  position: relative;
+  top: 5vh;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .naglar_service .slider {
+  margin-left: 5vw;
+  margin-top: 3vh;
+  border: 2px solid blueviolet;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .naglar_service .slider .sliders {
+  width: 500%;
+  height: 60vh;
+  display: flex;
+}
+main .naglar_service .slider .sliders input {
+  display: none;
+}
+main .naglar_service .slider .sliders .slide {
+  width: 20%;
+  height: 60vh;
+  transition: 2s;
+}
+main .naglar_service .slider .sliders .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .naglar_service .slider .sliders #radio1:checked ~ .first {
+  margin-left: 0;
+}
+main .naglar_service .slider .sliders #radio2:checked ~ .first {
+  margin-left: -20%;
+}
+main .naglar_service .slider .sliders #radio3:checked ~ .first {
+  margin-left: -40%;
+}
+main .naglar_service .slider .sliders #radio4:checked ~ .first {
+  margin-left: -60%;
+}
+main .naglar_service .slider .sliders #radio5:checked ~ .first {
+  margin-left: -80%;
+}
+main .naglar_service .slider .sliders .navigation_auto {
+  position: absolute;
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+  margin-top: 56vh;
+}
+main .naglar_service .slider .sliders .navigation_auto div {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+main .naglar_service .slider .sliders .navigation_auto div:not(:last-child) {
+  margin-right: 2vw;
+}
+main .naglar_service .slider .sliders #radio1:checked ~ .navigation_auto .auto_button1 {
+  background: blueviolet;
+}
+main .naglar_service .slider .sliders #radio2:checked ~ .navigation_auto .auto_button2 {
+  background: blueviolet;
+}
+main .naglar_service .slider .sliders #radio3:checked ~ .navigation_auto .auto_button3 {
+  background: blueviolet;
+}
+main .naglar_service .slider .sliders #radio4:checked ~ .navigation_auto .auto_button4 {
+  background: blueviolet;
+}
+main .naglar_service .slider .sliders #radio5:checked ~ .navigation_auto .auto_button5 {
+  background: blueviolet;
+}
+main .naglar_service .slider .navigation_manual {
+  position: absolute;
+  width: 40vw;
+  margin-top: -4vh;
+  display: flex;
+  justify-content: center;
+}
+main .naglar_service .slider .navigation_manual .maunal_button {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+main .naglar_service .slider .navigation_manual .maunal_button:hover {
+  background-color: blueviolet;
+}
+main .naglar_service .slider .navigation_manual .maunal_button:not(:last-child) {
+  margin-right: 2vw;
+}
+main .naglar_service .descriptions {
+  width: 45vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .naglar_service .descriptions .first_line {
+  font-size: clamp(20px, 2.5vw, 50px);
+}
+main .naglar_service .descriptions .second_line {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+  font-size: clamp(15px, 1.5vw, 30px);
+  justify-content: center;
+}
+main .fransar_service {
+  position: relative;
+  top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .fransar_service .sliderf {
+  margin-left: 5vw;
+  margin-top: 3vh;
+  border: 2px solid blueviolet;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .fransar_service .sliderf .slidersf {
+  width: 500%;
+  height: 60vh;
+  display: flex;
+}
+main .fransar_service .sliderf .slidersf input {
+  display: none;
+}
+main .fransar_service .sliderf .slidersf .slidef {
+  width: 20%;
+  height: 60vh;
+  transition: 2s;
+}
+main .fransar_service .sliderf .slidersf .slidef img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .fransar_service .sliderf .slidersf #radio1f:checked ~ .first {
+  margin-left: 0;
+}
+main .fransar_service .sliderf .slidersf #radio2f:checked ~ .first {
+  margin-left: -20%;
+}
+main .fransar_service .sliderf .slidersf #radio3f:checked ~ .first {
+  margin-left: -40%;
+}
+main .fransar_service .sliderf .slidersf #radio4f:checked ~ .first {
+  margin-left: -60%;
+}
+main .fransar_service .sliderf .slidersf #radio5f:checked ~ .first {
+  margin-left: -80%;
+}
+main .fransar_service .sliderf .slidersf .navigation_autof {
+  position: absolute;
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+  margin-top: 56vh;
+}
+main .fransar_service .sliderf .slidersf .navigation_autof div {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+main .fransar_service .sliderf .slidersf .navigation_autof div:not(:last-child) {
+  margin-right: 2vw;
+}
+main .fransar_service .sliderf .slidersf #radio1f:checked ~ .navigation_autof .auto_button1f {
+  background: blueviolet;
+}
+main .fransar_service .sliderf .slidersf #radio2f:checked ~ .navigation_autof .auto_button2f {
+  background: blueviolet;
+}
+main .fransar_service .sliderf .slidersf #radio3f:checked ~ .navigation_autof .auto_button3f {
+  background: blueviolet;
+}
+main .fransar_service .sliderf .slidersf #radio4f:checked ~ .navigation_autof .auto_button4f {
+  background: blueviolet;
+}
+main .fransar_service .sliderf .slidersf #radio5f:checked ~ .navigation_autof .auto_button5f {
+  background: blueviolet;
+}
+main .fransar_service .sliderf .navigation_manualf {
+  position: absolute;
+  width: 40vw;
+  margin-top: -4vh;
+  display: flex;
+  justify-content: center;
+}
+main .fransar_service .sliderf .navigation_manualf .maunal_button {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+main .fransar_service .sliderf .navigation_manualf .maunal_button:hover {
+  background-color: blueviolet;
+}
+main .fransar_service .sliderf .navigation_manualf .maunal_button:not(:last-child) {
+  margin-right: 2vw;
+}
+main .fransar_service .descriptions {
+  width: 45vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .fransar_service .descriptions .first_line {
+  font-size: clamp(20px, 2.5vw, 50px);
+}
+main .fransar_service .descriptions .second_line {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+  font-size: clamp(15px, 1.5vw, 30px);
+  justify-content: center;
+}
+main .prislista {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 5vw;
+  gap: 20vw;
+}
+main .prislista .naglar_pris {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  top: 8vh;
+  gap: 10px;
+  padding: 15px;
+  min-width: 500px;
+}
+main .prislista .naglar_pris .term {
+  display: flex;
+  align-items: center;
+}
+main .prislista .naglar_pris .term .term1 {
+  min-width: 300px;
+}
+main .prislista .naglar_pris .term .term2 {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+main .prislista .naglar_pris .term .term2 .term2a {
+  min-width: 70px;
+}
+main .prislista .annat_pris {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  top: 8vh;
+  gap: 10px;
+  min-width: 500px;
+  padding: 15px;
+}
+main .prislista .annat_pris .term {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+}
+main .prislista .annat_pris .term .term1 {
+  min-width: 300px;
+}
+main .prislista .annat_pris .term .term2 {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+main .prislista .annat_pris .term .term2 .term2a {
+  min-width: 70px;
+}
+main .service {
+  padding-top: 8vh;
+  z-index: 2;
+}
+main .service h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.Om_oss_container .om_oss_details {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: 20px;
+  padding-bottom: 100px;
+}
+.Om_oss_container .om_oss_details .open_time {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Om_oss_container .om_oss_details .open_time img {
+  width: 50px;
+  height: 50px;
+}
+.Om_oss_container .om_oss_details .address {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Om_oss_container .om_oss_details .address img {
+  width: 50px;
+  height: 50px;
+}
+.Om_oss_container .quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+}
+.Om_oss_container .quote p {
+  width: 60vw;
+  font-style: italic;
+}
+.Om_oss_container .quote span {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.follow {
+  position: relative;
+  padding-left: 5vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.follow .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.follow .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.follow a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.follow a img {
+  height: 50px;
+  width: 50px;
+}/*# sourceMappingURL=style.css.map */
